@@ -4,7 +4,7 @@ const urlDecode = function(texts) {
   texts = texts.split(' ')
 
   for(let text of texts) {
-    text = text.replace('=', ' ')
+    text = text.replace(/=/g, ' ')
     text = text.split(' ')
     let value = text[1].replace(/%20/g, ' ')
     obj[text[0]] = value
